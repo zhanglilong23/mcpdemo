@@ -1,1 +1,1 @@
-# NET_MCP_DEMO
+.net MCP demo by modelcontextprotocol/csharp-sdk
