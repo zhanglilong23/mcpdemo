@@ -14,7 +14,8 @@ McpClientOptions options = new()
 
 //1：注册MCPServer，以项目中引用为例。
 
-var config = new McpServerConfig
+//stdio方式运行MCPServer
+/*var config = new McpServerConfig
 {
     Id = "weather",
     Name = "Weather MCP Server",
@@ -25,6 +26,15 @@ var config = new McpServerConfig
         ["command"] = "dotnet",
         ["arguments"] = "run --project ../../../../MCPServer --no-build",
     }
+};*/
+
+//SSE远程方式连接MCPWebAPI
+var config = new McpServerConfig
+{
+    Id = "weather",
+    Name = "Weather MCP Server",
+    TransportType = TransportTypes.Sse,
+    Location = "http://127.0.0.1:5251/sse",
 };
 
 
